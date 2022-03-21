@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classStructure</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/5c95c5fc96.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./style.css" type="text/css">
+    <script src="./classMaker.js" defer></script>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <h1 class="text-center h-10 my-5">Make Automaticaly Class & Constructer</h1>
+        <div class="row justify-content-center">
+
+            <div class="col-4 left-column">
+                <form class="mb-4">
+                    <div class="mb-4" id="inputClass">
+                        <h2 class="pb-1 d-flex justify-content-between align-items-center">
+                            Class
+                            <button type="button" class="btn btn-outline-danger btn-sm reset">Reset</button>
+                        </h2>
+                        <input type="text" id="classNama" name="classNama" value="" class="form-control"
+                            placeholder="classNama">
+                    </div>
+                    <div class="mb-4" id="inputConstructor">
+                        <h2 class="pb-1 d-flex justify-content-between align-items-center">
+                            Constructer
+                            <span>
+                                <button type="button" class="btn btn-primary btn-sm me-2 add">Add</button>
+                                <button type="button" class="btn btn-outline-danger btn-sm reset">Reset</button>
+                            </span>
+                        </h2>
+                        <div id="constructorInputArea">
+                            <div class="mb-2 d-flex align-items-center">
+                                <input type="text" name="constructer[][name]" value="" class="form-control me-3"
+                                    placeholder="constructerName" id="constructorName1"><i
+                                    class="fa-solid fa-trash"></i>
+                            </div>
+                            <div class="mb-2 d-flex align-items-center">
+                                <input type="text" name="constructer[][name]" value="" class="form-control me-3"
+                                    placeholder="constructerName" id="constructorName2"><i
+                                    class="fa-solid fa-trash"></i>
+                            </div>
+                            <div class="mb-2 d-flex align-items-center">
+                                <input type="text" name="constructer[][name]" value="" class="form-control me-3"
+                                    placeholder="constructerName" id="constructorName3"><i
+                                    class="fa-solid fa-trash"></i>
+                            </div>
+                            <div class="mb-2 d-flex align-items-center">
+                                <input type="text" name="constructer[][name]" value="" class="form-control me-3"
+                                    placeholder="constructerName" id="constructorName4"><i
+                                    class="fa-solid fa-trash"></i>
+                            </div>
+                            <div class="mb-2 d-flex align-items-center">
+                                <input type="text" name="constructer[][name]" value="" class="form-control me-3"
+                                    placeholder="constructerName" id="constructorName5"><i
+                                    class="fa-solid fa-trash"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-4" id="inputMethod">
+                        <h2 class="pb-1 d-flex justify-content-between align-items-center">
+                            Method
+                            <span>
+                                <button type="button" class="btn btn-primary btn-sm me-2 add">Add</button>
+                                <button type="button" class="btn btn-outline-danger btn-sm reset">Reset</button>
+                            </span>
+                        </h2>
+                        <div class="mb-2 d-flex align-items-center">
+                            <input type="text" name="method[][name]" value="" class="form-control me-3"
+                                placeholder="methodName" id="methodName1"><i class="fa-solid fa-trash"></i>
+                        </div>
+                        <div class="mb-2 d-flex align-items-center">
+                            <input type="text" name="method[][name]" value="" class="form-control me-3"
+                                placeholder="methodName" id="methodName2"><i class="fa-solid fa-trash"></i>
+                        </div>
+                        <div class="mb-2 d-flex align-items-center">
+                            <input type="text" name="method[][name]" value="" class="form-control me-3"
+                                placeholder="methodName" id="methodName3"><i class="fa-solid fa-trash"></i>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-6">
+                <h2 class="pb-1 text-center h-10">Result</h2>
+                <textarea id="outputArea" class="w-100 mb-3" rows="10"></textarea>
+                <div class="row justify-content-center mb-4">
+                    <div class="col-7">
+                        <button type="button" onclick="elementGetBtn()" class="btn btn-primary w-100">Create or
+                            Update</button>
+                    </div>
+                    <div class="col-2">
+                        <button onclick="copyToClipboard()" class="btn btn-success w-100">Copy <i class="fa-solid fa-copy"></i></button>
+                    </div>
+                </div>
+                <div class="row justify-content-center mb-4">
+                    <div class="col-12 text-center">・　・　・</div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-3">
+                        <button type="button" onclick="clearResultBtn()" class="btn btn-secondary w-100 me-3">Clear
+                            result</button>
+                    </div>
+                    <div class="col-3">
+                        <button type="button" onclick="resetAllBtn()" class="btn btn-danger w-100">Reset all</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
